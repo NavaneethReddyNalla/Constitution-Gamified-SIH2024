@@ -13,13 +13,13 @@ function QuizPage() {
   const [flashcards, setFlashcards] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
 
-  let token = sessionStorage.getItem("token");
-  const axiosWithToken = axios.create({
-    headers: { authorization: `Bearer ${token}` },
-  });
+  // let token = sessionStorage.getItem("token");
+  // const axiosWithToken = axios.create({
+  //   headers: { authorization: `Bearer ${token}` },
+  // });
 
-  let params = useParams();
-  console.log(params);
+  // let params = useParams();
+  // console.log(params);
   // dummy data
   // class cards {
   //   constructor(id, question, answer, categoryid) {
@@ -42,10 +42,9 @@ function QuizPage() {
   // ];
   // // //above is dummy data
 
-  async function getFlashCards(categoryPath) {
-    console.log("in getflashcard function", categoryPath);
+  async function getFlashCards() {
     setIsLoading(true);
-    let res = await axiosWithToken.get(`https://flash-card-quiz-webapp-backend.onrender.com/category/${categoryPath}`);
+    let res = await axios.get(`http://localhost:3000/questions`);
     console.log("in quizpage", res.data);
     setFlashcards(res.data);
     setIsLoading(false);
@@ -54,8 +53,8 @@ function QuizPage() {
   }
 
   useEffect(() => {
-    getFlashCards(params.category);
-  }, [params]);
+    getFlashCards();
+  }, []);
 
   function SampleNextArrow(props) {
     const { className, style, onClick } = props;
