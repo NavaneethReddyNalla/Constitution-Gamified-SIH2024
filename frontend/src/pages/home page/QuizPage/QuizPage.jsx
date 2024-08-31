@@ -7,7 +7,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import axios from "axios";
 import Loader from "../../../components/loader/Loader";
-import { useParams } from "react-router-dom";
+//import { useParams } from "react-router-dom";
 
 function QuizPage() {
   const [flashcards, setFlashcards] = useState([]);

@@ -4,6 +4,7 @@ import {createBrowserRouter, RouterProvider} from 'react-router-dom'
 import RootLayout from './RootLayout';
 import HomePage from './pages/home page/HomePage'
 import QuizPage from './pages/home page/QuizPage/QuizPage'
+import Roadmap from './components/roadmap/roadmap';
 function App() {
 
   const browserRouter = createBrowserRouter([
@@ -15,10 +16,10 @@ function App() {
           path:'',
           element:<HomePage/>
         },
-        // {
-        //   path:'/vidhur',
-        //   element:
-        // },
+        {
+          path:'/roadmap',
+          element:<Roadmap/>
+        },
         {
           path:'/flash',
           element:<QuizPage/>
