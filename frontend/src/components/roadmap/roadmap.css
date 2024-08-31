@@ -1,0 +1,10 @@
+.roadmap-background {
+    background-image: url('../../images/roadmap.jpg'); /* Path to your image */
+    background-size: 100% 100%; /* Set the image to cover 100% of the width and height of the div */
+    background-position: center; /* Center the image */
+    margin-left: 30vw;
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    width: 40vw; /* Full width */
+    height: 100vh; /* Full height */
+  }
+  

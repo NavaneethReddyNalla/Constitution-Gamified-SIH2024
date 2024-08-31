@@ -1,20 +1,55 @@
-.home-bg {
+.home-page-main {
+  position: relative;
   width: 100%;
-  z-index: -2;
+  height: 100vh; /* Full height of the viewport */
+  overflow: hidden;
+}
+
+.home-bg-video {
   position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the video covers the container while maintaining its aspect ratio */
+  z-index: -1; /* Places the video behind other content */
 }
 
 .home-heading {
-  font-size: 70px;
+  font-size: 4.5rem; /* Adjusted to be more responsive */
   font-weight: 700;
   position: absolute;
-  top: 50%;
-  left: 35%;
+  top: 40%; /* Center vertically */
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centers the text horizontally */
+  color: white; /* Ensures the text stands out on the video */
+  text-align: center; /* Centers the text */
 }
 
 .home-subheading {
-  font-size: 25px;
+  font-size: 1.8rem; /* Adjusted to be more responsive */
   position: absolute;
-  top: 65%;
-  left: 35%;
+  font-weight: 400;
+  top: 55%; /* Adjusted position */
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centers the text horizontally */
+  color: white;
+  text-align: center;
+}
+
+.button-container {
+  position: absolute;
+  top: 70%; /* Positioned below the subheading */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+}
+
+.btn {
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  margin: 0;
+
 }
