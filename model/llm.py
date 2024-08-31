@@ -27,12 +27,15 @@ embedding_model = SentenceTransformer("all-MiniLM-L6-v2")
 
 
 template = """
-    You are a legal expert on the Indian Constitution. Based on the relevant sections provided, answer the following question in simple terms:
+    You are a legal expert on the Indian Constitution. Based on the relevant sections provided below:
 
     {context}
 
     Question: {query}
 
+    In case the sections provided above aren't relevant to the query or you find there is a mix up, don't include that part in your final answer.
+    Your final answer should only include the answer to the question.
+    
     Answer in a simplified manner:
     """
 
@@ -48,6 +51,18 @@ def retrieve_relevant_chunks(query, top_k=5):
     relevant_chunks = [(texts[i], metadata[i], distances[0][j]) for j, i in enumerate(indices[0])]
     
     return relevant_chunks
+
+
+def get_model_response(query):
+    relevant_chunks = retrieve_relevant_chunks(query)
+    context = ""
+    for chunk, meta, dist in relevant_chunks:
+        context += f"{meta['section_title']}\n"
+        # context += f"Section: {meta['section_title']}, Distance: {dist}\n"
+        context += chunk + "\n"
+        context += ("-" * 50) + "\n"
+
+    return rag_chain.invoke({"context": context, "query": query})
 
 
 if __name__ == "__main__":
