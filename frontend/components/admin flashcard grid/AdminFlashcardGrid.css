@@ -1,0 +1,22 @@
+.admin-flashcard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+   gap: 20px; 
+   padding: 20px; 
+  background-color: #ffe4c4;
+}
+
+/* .admin-flashcard-grid {
+  background-color: #ffe4c4;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.admin-flashcard-grid .card {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.admin-flashcard-grid .card:hover {
+  transform: scale(1.05);
+} */

@@ -1,0 +1,48 @@
+.quiz-page {
+  padding: 15px;
+  width: 100%;
+  position: relative;
+  background-color: rgb(235, 250, 250);
+  /* left: 40%; */
+  /* height: 508px; */
+  /* position: absolute; */
+  /* left: 38%; */
+}
+
+/* 
+.slick-slider.slick-initialized {
+  width: 100vw;
+}
+.slick-arrow.slick-prev {
+  background: black;
+}
+.slick-arrow.slick-next {
+  background: black;
+} */
+
+/* .slider{ */
+/* background-color: ; */
+/* position: relative;
+  border-radius: 1rem;
+  width: 100%;
+  height: 510px;
+  overflow: hidden; */
+/* .} */
+
+/* #next,
+#prev {
+  position: absolute;
+  top: 40%;
+  color: #141313;
+  background-color: transparent;
+  border: none;
+  font-size: xxx-large;
+  font-family: monospace;
+  font-weight: bold;
+  left: -300px;
+}
+
+#next {
+  left: unset;
+  right: -300px;
+} */

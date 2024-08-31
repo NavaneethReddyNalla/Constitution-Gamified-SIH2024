@@ -1,0 +1,20 @@
+.home-bg {
+  width: 100%;
+  z-index: -2;
+  position: fixed;
+}
+
+.home-heading {
+  font-size: 70px;
+  font-weight: 700;
+  position: absolute;
+  top: 50%;
+  left: 35%;
+}
+
+.home-subheading {
+  font-size: 25px;
+  position: absolute;
+  top: 65%;
+  left: 35%;
+}

@@ -1,0 +1,10 @@
+.admin-page-add-delete-cards {
+  margin: 10px;
+  /* gap: unset; */
+}
+
+.page-loader{
+  position: relative;
+  top: 40%;
+  left: 350%;
+}

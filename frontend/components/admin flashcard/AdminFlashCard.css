@@ -1,0 +1,80 @@
+.admin-flashcard {
+  position: relative;
+  background: linear-gradient(
+    120deg,
+    bisque 60%,
+    rgb(255, 231, 222) 88%,
+    rgb(255, 211, 195) 40%,
+    rgba(255, 127, 80, 0.603) 48%
+  );
+  color: coral;
+  border: 1px solid coral;
+  border-radius: 1rem;
+  padding: 20px;
+  box-shadow: 0 8px 14px 0 rgba(0, 0, 0, 0.2);
+  width: 330px;
+  height: 250px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.admin-flashcard:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 20px 0 rgba(0, 0, 0, 0.3);
+}
+
+.admin-flashcard-content {
+  z-index: 2;
+}
+
+.admin-flashcard-category {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #d2691e;
+  margin: 0;
+}
+
+.admin-flashcard-question {
+  font-size: 1.3em;
+  font-weight: bold;
+  margin: 10px 0 0;
+}
+
+.admin-flashcard-answer {
+  font-size: 1.0em;
+  color: tomato;
+  margin: 20px 0 0;
+}
+
+.admin-flashcard-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s;
+  border-radius: 1rem;
+}
+
+.admin-flashcard:hover .admin-flashcard-overlay {
+  opacity: 2;
+}
+
+.icon {
+  font-size: 1.5em;
+  color: coral;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.edit-icon:hover {
+  color: #f7b093;
+}
+
+.delete-icon:hover {
+  color: tomato;
+}

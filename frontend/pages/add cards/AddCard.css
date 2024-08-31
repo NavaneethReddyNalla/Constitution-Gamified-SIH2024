@@ -1,0 +1,65 @@
+.addcard-form-container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 50px;
+  background-color: #ffe4c4;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  font-family: "Arial", sans-serif;
+  /* background-color: red; */
+  flex-grow: 1; /* Allow the form container to grow within the flex layout */
+  width: 100%; /* Ensure it uses the full width available */
+  max-width: 850px; /* Use max-width to limit the container width */
+}
+
+.addcard-form-container h2 {
+  text-align: center;
+  color: #f7b093;
+  margin-bottom: 20px;
+}
+
+.addcard-form-group {
+  margin-bottom: 15px;
+}
+
+.addcard-form-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #d2691e;
+  font-weight: bold;
+}
+
+.addcard-form-group input,
+.addcard-form-group textarea,
+.addcard-form-group select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #d2691e;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.addcard-form-group textarea {
+  resize: vertical;
+  height: 100px;
+}
+
+.error-message {
+  color: tomato;
+  margin-top: 5px;
+}
+
+.submit-button {
+  width: 100%;
+  padding: 10px;
+  background-color: tomato;
+  color: white;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background-color: #e55b36;
+}
